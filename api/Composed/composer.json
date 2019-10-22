@@ -1,0 +1,11 @@
+{
+	"autoload": {
+		"psr-4": {
+			"Components\\": ""
+		}
+	},
+    "require": {
+        "php": ">=7.1.0",
+        "jacwright/restserver": "^1.2"
+    }
+}
