@@ -14,8 +14,11 @@
 
 `git clone https://github.com/ardent-services/nycvoters .`
 
+
 **MySQL**
+
 Create database and user
+
 `mysql -u user -p database < nycvoters.sql`
 
 API tokens are generated manually
