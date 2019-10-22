@@ -26,6 +26,10 @@ API tokens are generated manually
 *	generate some API key for example here `https://www.guidgenerator.com/`
 *	save md5 hash of API key into `tokens` table
 
+Users credentials are stored directly in code
+*	app/include/UsersModel.php
+
 Edit environment files
 *	api/_env.php
 *	app/include/env.php
+`APIENTRY` value should be in form of `baseurl/api/voters`
