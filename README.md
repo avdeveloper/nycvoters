@@ -21,6 +21,7 @@ Create database and user
 
 `mysql -u user -p database < nycvoters.sql`
 
+
 API tokens are generated manually
 *	generate some API key for example here `https://www.guidgenerator.com/`
 *	save md5 hash of API key into `tokens` table
