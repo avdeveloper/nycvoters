@@ -1,0 +1,7 @@
+version: "2"
+
+syncs:
+  api-sync:
+    src: './api'
+  app-sync:
+    src: './app'
