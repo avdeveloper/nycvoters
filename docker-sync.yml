@@ -5,3 +5,4 @@ syncs:
     src: './api'
   app-sync:
     src: './app'
+    sync_excludes: [ '.*' ]
