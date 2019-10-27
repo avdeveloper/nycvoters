@@ -165,7 +165,7 @@ EOD;
 
 	protected function __construct()
 	{
-		$this->db = new Db(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+		$this->db = new Db(getenv('DB_HOST'), getenv('DB_USER'), getenv('DB_PASS'), getenv('DB_NAME'));
 	}
 	
 	

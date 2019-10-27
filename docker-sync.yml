@@ -3,6 +3,7 @@ version: "2"
 syncs:
   api-sync:
     src: './api'
+    sync_excludes: [ '.*' ]
   app-sync:
     src: './app'
     sync_excludes: [ '.*' ]
