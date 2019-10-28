@@ -32,4 +32,4 @@ Users credentials are stored directly in code
 Edit environment files
 *	api/_env.php
 *	app/include/env.php
-`APIENTRY` value should be in form of `baseurl/api/voters`
+`APIENTRY` value should be in form of `baseurl/voters`

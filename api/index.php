@@ -1,7 +1,7 @@
 <?php
 spl_autoload_register(); // don't load our classes unless we use them
 require_once __DIR__ . '/Include/loader.php';
-require_once __DIR__ . '/_env.php';
+// require_once __DIR__ . '/_env.php'; no need for this
 
 use Jacwright\RestServer\RestServer;
 

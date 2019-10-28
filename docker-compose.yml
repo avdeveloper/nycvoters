@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+  api:
+    image: webdevops/php-apache:alpine
+    environment:
+      - WEB_ALIAS_DOMAIN=api.vm # Add this to your hosts file
+      - DB_HOST=$DB_HOST
+      - DB_USER=$DB_USER
+      - DB_PASS=$DB_PASS
+      - DB_NAME=$DB_NAME
+    ports:
+      - '8090:443'
+    volumes:
+      - api-sync:/app
+  app:
+    image: webdevops/php-apache:alpine
+    environment:
+      - WEB_ALIAS_DOMAIN=app.vm # Add this to your hosts file
+    ports:
+      - '8091:443'
+    volumes:
+      - app-sync:/app
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_USER=$DB_USER
+      - MYSQL_PASSWORD=$DB_PASS
+      - MYSQL_ROOT_PASSWORD=$DB_PASS
+      - MYSQL_DATABASE=$DB_NAME
+    volumes:
+      - ./db-init:/docker-entrypoint-initdb.d
+  adminer:
+    image: adminer
+    depends_on: 
+      - db
+    restart: always
+    ports:
+      - '8080:8080'
+
+volumes:
+  api-sync:
+    external: true
+  app-sync:
+    external: true
