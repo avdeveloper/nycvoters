@@ -1,3 +1,7 @@
 .docker-sync/
 *.swp
 .env
+.DS_Store
+db-init
+api/_env.php
+app/include/env.php
